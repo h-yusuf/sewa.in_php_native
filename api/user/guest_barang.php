@@ -242,6 +242,38 @@ switch ($action) {
         $conn->close();
         break;
 
+
+    case 'cekTransaksi':
+        $query = "
+        SELECT 
+        transaksi.id as idTransaksi,
+        transaksi.status as transaksiStatus,
+        barang.idUser as idUserHost,
+        barang.tarifHarian as tarifHarian,
+        transaksi.tarif as tarifTotal,
+        transaksi.tglPinjam as tglPinjam,
+        transaksi.tglKembali as tglKembali,
+        barang.namaBarang as namaBarang
+        from transaksi 
+        inner join barang on barang.id = transaksi.idBarang
+        inner join user on user.id = transaksi.idHost
+        where transaksi.idGuest = '" . $sessionIdUser . "' order by time desc";
+        $result = $conn->query($query);
+        $data = array();
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        $conn->close();
+        http_response_code(200);
+        header('Content-Type: application/json');
+        echo json_encode($data);
+        exit();
+        break;
+
+
     case 'cekTransaksiDetail':
         $idTransaksi = isset($_GET['idTransaksi']) ? $_GET['idTransaksi'] : null;
         $query = "
@@ -258,36 +290,6 @@ switch ($action) {
         where transaksi.id = '" . $idTransaksi . "' 
         order by time desc"
         ;
-        $result = $conn->query($query);
-        $data = array();
-
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $data[] = $row;
-            }
-        }
-        $conn->close();
-        http_response_code(200);
-        header('Content-Type: application/json');
-        echo json_encode($data);
-        exit();
-        break;
-
-    case 'cekTransaksi':
-        $query = "
-        SELECT 
-        transaksi.id as idTransaksi,
-        transaksi.status as transaksiStatus,
-        kendaraan.idUser as idUserHost,
-        kendaraan.tarifHarian as tarifHarian,
-        transaksi.tarif as tarifTotal,
-        transaksi.tglPinjam as tglPinjam,
-        transaksi.tglKembali as tglKembali,
-        kendaraan.namaBarang as namaBarang
-        from transaksi 
-        inner join kendaraan on kendaraan.id = transaksi.idKendaraan
-        inner join user on user.id = transaksi.idHost
-        where transaksi.idGuest = '" . $sessionIdUser . "' order by time desc";
         $result = $conn->query($query);
         $data = array();
 
