@@ -1,0 +1,1640 @@
+{
+	"info": {
+		"_postman_id": "e31f0f17-d977-4bda-9cb3-1ebc94b65e03",
+		"name": "sewa_in",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30499196",
+		"_collection_link": "https://planetary-capsule-833543.postman.co/workspace/Team-Workspace~c3462191-50e9-4f22-8817-568813b54700/collection/30499196-e31f0f17-d977-4bda-9cb3-1ebc94b65e03?action=share&source=collection_link&creator=30499196"
+	},
+	"item": [
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user5",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "nik",
+							"value": "3321456346547",
+							"type": "text"
+						},
+						{
+							"key": "namaLengkap",
+							"value": "sasuke uciha",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl imam bonjol, yogyakarta utara",
+							"type": "text"
+						},
+						{
+							"key": "noTelf",
+							"value": "085631287",
+							"type": "text"
+						},
+						{
+							"key": "kota",
+							"value": "sleman",
+							"type": "text"
+						},
+						{
+							"key": "fotoProfil",
+							"type": "file",
+							"src": "/C:/Users/Andre/Pictures/background_linkedin-01.png"
+						},
+						{
+							"key": "fotoKTP",
+							"type": "file",
+							"src": "/C:/Users/Andre/Pictures/report cerita/2.png"
+						},
+						{
+							"key": "fotoSKTP",
+							"type": "file",
+							"src": "/C:/Users/Andre/Pictures/background_linkedin-01.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sgt/api/user/register.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sgt",
+						"api",
+						"user",
+						"register.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_ProfileGetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/guest_barang.php?action=cekProfile&sessionID=YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09&sessionIdUser=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"guest_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekProfile"
+						},
+						{
+							"key": "sessionID",
+							"value": "YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "18"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_BarangGetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/guest_barang.php?action=getAll&sessionID=YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09&sessionIdUser=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"guest_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getAll"
+						},
+						{
+							"key": "sessionID",
+							"value": "YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "18"
+						},
+						{
+							"key": "search",
+							"value": "bantul",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_BarangGetDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/guest_barang.php?action=getDetail&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19&idBarang=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"guest_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						},
+						{
+							"key": "idBarang",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_barang_booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBarang",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "tglPinjam",
+							"value": "2024-06-23",
+							"type": "text"
+						},
+						{
+							"key": "tglKembali",
+							"value": "2024-06-24",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/guest_barang.php?action=booking&sessionID=YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09&sessionIdUser=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"guest_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "booking"
+						},
+						{
+							"key": "sessionID",
+							"value": "YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "18"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_barang_kembalikan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/guest_barang.php?action=kembalikanBarang&sessionID=YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09&sessionIdUser=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"guest_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "kembalikanBarang"
+						},
+						{
+							"key": "sessionID",
+							"value": "YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "18"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_cekTransaksi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/guest_barang.php?action=cekTransaksi&sessionID=YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09&sessionIdUser=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"guest_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksi"
+						},
+						{
+							"key": "sessionID",
+							"value": "YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "18"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guest_cekTransaksiDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/guest_barang.php?action=cekTransaksiDetail&sessionID=YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09&sessionIdUser=18&idTransaksi=26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"guest_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksiDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "YU44bVRiVnJTdmF4WjBCWkJZM0NhUT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "18"
+						},
+						{
+							"key": "idTransaksi",
+							"value": "26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_barang_getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=getAll&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19&search=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getAll"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						},
+						{
+							"key": "search",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_barang_getDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=getDetail&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19&idBarang=9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						},
+						{
+							"key": "idBarang",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_cekTransaksi_getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=cekTransaksi&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksi"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_cekTransaksi_getDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=cekTransaksiDetail&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19&idTransaksi=26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksiDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						},
+						{
+							"key": "idTransaksi",
+							"value": "26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_barang_add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "namaBarang",
+							"value": "Kamera Aja",
+							"type": "text"
+						},
+						{
+							"key": "tarifHarian",
+							"value": "10000",
+							"type": "text"
+						},
+						{
+							"key": "fotoBarang",
+							"type": "file",
+							"src": "/C:/Users/sachio/Pictures/Harga-dan-Spesifikasi-Motor-listrik-Electrum-H3-1200x1034.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=insert&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "insert"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_barang_edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "namaBarang",
+							"value": "kamera in",
+							"type": "text"
+						},
+						{
+							"key": "tarifHarian",
+							"value": "20000",
+							"type": "text"
+						},
+						{
+							"key": "idBarang",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "fotoBarang",
+							"type": "file",
+							"src": "/C:/Users/sachio/Pictures/H3 LOGO BLACK.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=edit&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "edit"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_barang_delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBarang",
+							"value": "13",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=delete&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "delete"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_bookingReject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=bookingReject&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "bookingReject"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_bookingConfirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=bookingConfirm&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "bookingConfirm"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_serahkanBarangKeGuest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=serahkanBarangKeGuest&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "serahkanBarangKeGuest"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "host_menerimaBarangDariGuest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/host_barang.php?action=menerimaBarangDariGuest&sessionID=WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09&sessionIdUser=19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"host_barang.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "menerimaBarangDariGuest"
+						},
+						{
+							"key": "sessionID",
+							"value": "WFM0N1gzaHEyMm16TjNZZ3NlUGFYQT09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/loginAdmin.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"loginAdmin.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=getAll&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getAll"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "search",
+							"value": "bantul",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_getDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=getDetail&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&idUser=18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "getDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idUser",
+							"value": "18"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "fendi",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "nik",
+							"value": "65877690",
+							"type": "text"
+						},
+						{
+							"key": "namaLengkap",
+							"value": "fendi ahmad",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl kaliurang no 12",
+							"type": "text"
+						},
+						{
+							"key": "kota",
+							"value": "depok",
+							"type": "text"
+						},
+						{
+							"key": "noTelf",
+							"value": "088758",
+							"type": "text"
+						},
+						{
+							"key": "fotoProfil",
+							"type": "file",
+							"src": "/C:/Users/Andre/Pictures/report cerita/4.png"
+						},
+						{
+							"key": "fotoKTP",
+							"type": "file",
+							"src": "/C:/Users/Andre/Pictures/report cerita/3.png"
+						},
+						{
+							"key": "fotoSKTP",
+							"type": "file",
+							"src": "/C:/Users/Andre/Pictures/report cerita/3.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=add&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "add"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "nik",
+							"value": "5768768435",
+							"type": "text"
+						},
+						{
+							"key": "namaLengkap",
+							"value": "sasuke ujchiha",
+							"type": "text"
+						},
+						{
+							"key": "alamat",
+							"value": "jl kaliurang no 12",
+							"type": "text"
+						},
+						{
+							"key": "kota",
+							"value": "sleman",
+							"type": "text"
+						},
+						{
+							"key": "noTelf",
+							"value": "088758",
+							"type": "text"
+						},
+						{
+							"key": "idUser",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "verifikasi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=edit&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "edit"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_user_delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idUser",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=delete&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "delete"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_barang_GetAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=barangGetAll&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "barangGetAll"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_barang_GetDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=barangGetDetail&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&idBarang=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "barangGetDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idBarang",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_barang_edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "namaBarang",
+							"value": "Ayam aja  sih",
+							"type": "text"
+						},
+						{
+							"key": "tarifHarian",
+							"value": "20000",
+							"type": "text"
+						},
+						{
+							"key": "idBarang",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "fotoBarang",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "status",
+							"value": "ready",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=barangEdit&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "barangEdit"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idBarang",
+							"value": "6",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_barang_delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBarang",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=barangDelete&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&idKendaraan=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "barangDelete"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idKendaraan",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_cekTransaksi",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=cekTransaksi&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksi"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_cekTransaksi_detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=cekTransaksiDetail&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1&idTransaksi=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "cekTransaksiDetail"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						},
+						{
+							"key": "idTransaksi",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_editTransaksiStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idTransaksi",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "selesai",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=editTransaksiStatus&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "editTransaksiStatus"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin_editBarangStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idBarang",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "ready",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/sewa_in/api/user/adminUser.php?action=editBarangStatus&sessionID=azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09&sessionIdUser=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sewa_in",
+						"api",
+						"user",
+						"adminUser.php"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "editBarangStatus"
+						},
+						{
+							"key": "sessionID",
+							"value": "azNOSDVCb0gzRE1DT1RnNWVWT2dlZz09"
+						},
+						{
+							"key": "sessionIdUser",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
